@@ -29,7 +29,6 @@ process_files() {
             echo "$BODY" | mutt -s "$SUBJECT" -a "$file" -- "$RECIPIENT"
         done
         
-
         # Wait for a brief moment to ensure the log is written
         sleep 3
         # Check the msmtp log to confirm the email was sent successfully
@@ -52,17 +51,14 @@ process_files() {
 # Purchase vars
 BUY_FOLDER="$HOME/Sync/jelly/bookkeeping/2024/in/"
 BUY_PROCESSED_FOLDER="${BUY_FOLDER}processed"
-#BUY_RECIPIENT="x55i@aankoop.exactonline.be"
-BUY_RECIPIENT="jp_id_serv@outlook.com"
-
+BUY_RECIPIENT="x55i@aankoop.exactonline.be"
 BUY_SUBJECT="Automated File Submission: aankoopfacturen JP I&D Services"
 BUY_BODY="Attached you find some purchase invoices. This email is automated. In case of any questions or bugs, don't hesitate to reach out. Have a nice day!"
 
 # Sales vars
 SELL_FOLDER="$HOME/Sync/jelly/bookkeeping/2024/out/"
 SELL_PROCESSED_FOLDER="${SELL_FOLDER}processed"
-#SELL_RECIPIENT="x55i@verkoop.exactonline.be"
-SELL_RECIPIENT="jp_id_serv@outlook.com"
+SELL_RECIPIENT="x55i@verkoop.exactonline.be"
 SELL_SUBJECT="Automated File Submission: verkoopfacturen JP I&D Services"
 SELL_BODY="Attached you find some sales invoices. This email is automated. In case of any questions or bugs, don't hesitate to reach out. Have a nice day!"
 
